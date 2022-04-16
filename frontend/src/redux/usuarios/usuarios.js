@@ -27,7 +27,7 @@ export default function usuarioReducer(state = dataInicial, action) {
 
 export const registrarUsuario = (dataUsuario) => async (dispatch, getState) => {
   const respuesta = await axios.post(
-    "https://react-sports-5.herokuapp.com/api/autorizacion/signUp",
+    "https://reactsport.herokuapp.com/api/autorizacion/signUp",
     { dataUsuario }
   ); //datos para registrarse
   dispatch({ type: MENSAJE, payload: respuesta.data });
@@ -35,7 +35,7 @@ export const registrarUsuario = (dataUsuario) => async (dispatch, getState) => {
 
 export const iniciarSesion = (dataUsuario) => async (dispatch, getState) => {
   const usuario = await axios.post(
-    "https://react-sports-5.herokuapp.com/api/autorizacion/signIn",
+    "https://reactsport.herokuapp.com/api/autorizacion/signIn",
     { dataUsuario }
   ); //mandar contra y mail
   console.log(usuario.data);
@@ -48,7 +48,7 @@ export const iniciarSesion = (dataUsuario) => async (dispatch, getState) => {
 };
 
 export const cerrarSesion = (sesionCerrada) => async (dispatch, getState) => {
-  const usuario = axios.post("https://react-sports-5.herokuapp.com/api/autorizacion/signOut", {
+  const usuario = axios.post("https://reactsport.herokuapp.com/api/autorizacion/signOut", {
     sesionCerrada,
   }); //mandar mail
   console.log(usuario);
@@ -58,7 +58,7 @@ export const cerrarSesion = (sesionCerrada) => async (dispatch, getState) => {
 
 export const verificarToken = (token) => async (dispatch, getState) => {
   const user = await axios.get(
-    "https://react-sports-5.herokuapp.com/autorizacion/signInToken",
+    "https://reactsport.herokuapp.com/autorizacion/signInToken",
     {
       headers: {
         Authorization: "Bearer " + token,

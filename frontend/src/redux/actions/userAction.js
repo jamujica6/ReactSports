@@ -3,7 +3,7 @@ import axios from "axios";
 const userAction = {
   signUpUser: (userData) => {
     return async (dispatch, getState) => {
-      const res = await axios.post("https://react-sports-5.herokuapp.com/api/auth/signUp", {
+      const res = await axios.post("https://reactsport.herokuapp.com/api/auth/signUp", {
         userData,
       });
       dispatch({
@@ -19,7 +19,7 @@ const userAction = {
 
   signInUser: (userData) => {
     return async (dispatch, getState) => {
-      const user = await axios.post("https://react-sports-5.herokuapp.com/api/auth/signIn", {
+      const user = await axios.post("https://reactsport.herokuapp.com/api/auth/signIn", {
         userData,
       });
       if (user.data.success) {
@@ -48,7 +48,7 @@ const userAction = {
 
   signOutUser: (userData) => {
     return async (dispatch, getState) => {
-      const user = axios.post("https://react-sports-5.herokuapp.com/api/auth/signOut", {
+      const user = axios.post("https://reactsport.herokuapp.com/api/auth/signOut", {
         userData,
       });
       localStorage.removeItem("token");
@@ -59,7 +59,7 @@ const userAction = {
   verifyToken: (token) => {
     return async (dispatch, getState) => {
       const user = await axios.get(
-        "https://react-sports-5.herokuapp.com/api/auth/signInToken",
+        "https://reactsport.herokuapp.com/api/auth/signInToken",
         {
           headers: {
             Authorization: "Bearer " + token,

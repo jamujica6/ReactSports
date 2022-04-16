@@ -4,7 +4,7 @@ const productsActions = {
   addProduct: (productData) => {
     return async (dispatch, getState) => {
       try {
-        const res = await axios.post(`https://react-sports-5.herokuapp.com/api/allGoods/`, {
+        const res = await axios.post(`https://reactsport.herokuapp.com/api/allGoods/`, {
           productData,
         });
         dispatch({
@@ -26,7 +26,7 @@ const productsActions = {
     return async (dispatch, getState) => {
       try {
         const res = await axios.put(
-          "https://react-sports-5.herokuapp.com/api/allGoodsId/" + prodId,
+          "https://reactsport.herokuapp.com/api/allGoodsId/" + prodId,
           { ...toModifyProduct }
         );
         dispatch({
@@ -48,7 +48,7 @@ const productsActions = {
   deleteProduct: (id) => {
     return async (dispatch, getState) => {
       const res = await axios.delete(
-        `https://react-sports-5.herokuapp.com/api/allGoodsId/${id}`
+        `https://reactsport.herokuapp.com/api/allGoodsId/${id}`
       );
       dispatch({
         type: "message",
