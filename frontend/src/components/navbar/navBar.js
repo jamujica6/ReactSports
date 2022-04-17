@@ -215,10 +215,10 @@ const NavBar = (props) => {
                   {/*HERE STARTS CATEGORY */}
 
                   <Box sx={{ flexGrow: 0 }}>
-                    <Tooltip title="Select a Category">
                       <IconButton
                         onClick={handleOpenCategoryMenu}
                         sx={{ p: 0 }}
+                        className="hoverButtonsNav"
                       >
                         <p className="pDropdown">
                           CATEGORY{" "}
@@ -230,7 +230,6 @@ const NavBar = (props) => {
                           />
                         </p>
                       </IconButton>
-                    </Tooltip>
                     <Menu
                       sx={{ mt: "45px" }}
                       id="menu-appbar"
@@ -250,8 +249,8 @@ const NavBar = (props) => {
                       <>
                         {uniqueTypesArray?.map((element) => (
                           <MenuItem>
-                            <LinkRouter to={`/type/${element}`}>
-                              {element}
+                            <LinkRouter to={`/type/${element}`} className="optionsDropdown">
+                              {element.toUpperCase()}
                             </LinkRouter>
                           </MenuItem>
                         ))}
@@ -262,8 +261,7 @@ const NavBar = (props) => {
                 {/*  SPORT MENU */}
                 <MenuItem>
                   <Box sx={{ flexGrow: 0 }}>
-                    <Tooltip title="Select a Sport">
-                      <IconButton onClick={handleOpenSportMenu} sx={{ p: 0 }}>
+                      <IconButton onClick={handleOpenSportMenu} sx={{ p: 0 }} className="hoverButtonsNav">
                         <p className="pDropdown">
                           SPORT{" "}
                           <img
@@ -274,7 +272,6 @@ const NavBar = (props) => {
                           />
                         </p>
                       </IconButton>
-                    </Tooltip>
                     <Menu
                       sx={{ mt: "45px" }}
                       id="menu-appbar"
@@ -294,8 +291,8 @@ const NavBar = (props) => {
                       <>
                         {uniqueSportsArray?.map((element) => (
                           <MenuItem>
-                            <LinkRouter to={`/sports/${element}`}>
-                              {element}
+                            <LinkRouter to={`/sports/${element}`} className="optionsDropdown">
+                              {element.toUpperCase()}
                             </LinkRouter>
                           </MenuItem>
                         ))}
@@ -306,8 +303,7 @@ const NavBar = (props) => {
                 {/*  HERE STARTS GENDER */}
                 <MenuItem>
                   <Box sx={{ flexGrow: 0 }}>
-                    <Tooltip title="Select a Gender">
-                      <IconButton onClick={handleOpenGenderMenu} sx={{ p: 0 }}>
+                      <IconButton onClick={handleOpenGenderMenu} sx={{ p: 0 }} className="hoverButtonsNav">
                         <p className="pDropdown">
                           GENDER{" "}
                           <img
@@ -318,7 +314,6 @@ const NavBar = (props) => {
                           />
                         </p>
                       </IconButton>
-                    </Tooltip>
                     <Menu
                       sx={{ mt: "45px" }}
                       id="menu-appbar"
@@ -338,8 +333,8 @@ const NavBar = (props) => {
                       <>
                         {uniqueGendersArray?.map((element) => (
                           <MenuItem>
-                            <LinkRouter to={`/gender/${element}`}>
-                              {element}
+                            <LinkRouter to={`/gender/${element}`} className="optionsDropdown">
+                              {element.toUpperCase()}
                             </LinkRouter>
                           </MenuItem>
                         ))}
@@ -350,8 +345,7 @@ const NavBar = (props) => {
 
                 <MenuItem>
                   <Box sx={{ flexGrow: 0 }}>
-                    <Tooltip title="Select a Brand">
-                      <IconButton onClick={handleOpenBrandMenu} sx={{ p: 0 }}>
+                      <IconButton onClick={handleOpenBrandMenu} sx={{ p: 0 }} className="hoverButtonsNav">
                         <p className="pDropdown">
                           BRAND{" "}
                           <img
@@ -362,7 +356,6 @@ const NavBar = (props) => {
                           />
                         </p>
                       </IconButton>
-                    </Tooltip>
                     <Menu
                       sx={{ mt: "45px" }}
                       id="menu-appbar"
@@ -382,8 +375,8 @@ const NavBar = (props) => {
                       <>
                         {uniqueBrandsArray?.map((element) => (
                           <MenuItem>
-                            <LinkRouter to={`/brands/${element}`}>
-                              {element}
+                            <LinkRouter to={`/brands/${element}`} className="optionsDropdown">
+                              {element.toUpperCase()}
                             </LinkRouter>
                           </MenuItem>
                         ))}
@@ -418,8 +411,7 @@ const NavBar = (props) => {
                 {/*HERE STARTS CATEGORY */}
 
                 <Box sx={{ flexGrow: 0 }}>
-                  <Tooltip title="Select a Category">
-                    <IconButton onClick={handleOpenCategoryMenu} sx={{ p: 0 }}>
+                    <IconButton onClick={handleOpenCategoryMenu} sx={{ p: 0 }} className="hoverButtonsNav">
                       <p className="pDropdown">
                         CATEGORY{" "}
                         <img
@@ -430,7 +422,6 @@ const NavBar = (props) => {
                         />
                       </p>
                     </IconButton>
-                  </Tooltip>
                   <Menu
                     sx={{ mt: "45px" }}
                     id="menu-appbar"
@@ -450,8 +441,8 @@ const NavBar = (props) => {
                     <>
                       {uniqueTypesArray?.map((element) => (
                         <MenuItem className="linksNav">
-                          <LinkRouter to={`/type/${element}`}>
-                            {element}
+                          <LinkRouter to={`/type/${element}`} className="optionsDropdown">
+                            {element.toUpperCase()}
                           </LinkRouter>
                         </MenuItem>
                       ))}
@@ -462,8 +453,7 @@ const NavBar = (props) => {
               {/*  SPORT MENU */}
               <MenuItem>
                 <Box sx={{ flexGrow: 0 }}>
-                  <Tooltip title="Select a Sport">
-                    <IconButton onClick={handleOpenSportMenu} sx={{ p: 0 }}>
+                    <IconButton onClick={handleOpenSportMenu} sx={{ p: 0 }} className="hoverButtonsNav">
                       <p className="pDropdown">
                         SPORT{" "}
                         <img
@@ -474,7 +464,6 @@ const NavBar = (props) => {
                         />
                       </p>
                     </IconButton>
-                  </Tooltip>
                   <Menu
                     sx={{ mt: "45px" }}
                     id="menu-appbar"
@@ -494,8 +483,8 @@ const NavBar = (props) => {
                     <>
                       {uniqueSportsArray?.map((element) => (
                         <MenuItem>
-                          <LinkRouter to={`/sports/${element}`}>
-                            {element}
+                          <LinkRouter to={`/sports/${element}`} className="optionsDropdown">
+                            {element.toUpperCase()}
                           </LinkRouter>
                         </MenuItem>
                       ))}
@@ -506,8 +495,7 @@ const NavBar = (props) => {
               {/*  HERE STARTS GENDER */}
               <MenuItem>
                 <Box sx={{ flexGrow: 0 }}>
-                  <Tooltip title="Select a Gender">
-                    <IconButton onClick={handleOpenGenderMenu} sx={{ p: 0 }}>
+                    <IconButton onClick={handleOpenGenderMenu} sx={{ p: 0 }} className="hoverButtonsNav">
                       <p className="pDropdown">
                         GENDER{" "}
                         <img
@@ -518,7 +506,6 @@ const NavBar = (props) => {
                         />
                       </p>
                     </IconButton>
-                  </Tooltip>
                   <Menu
                     sx={{ mt: "45px" }}
                     id="menu-appbar"
@@ -538,8 +525,8 @@ const NavBar = (props) => {
                     <>
                       {uniqueGendersArray?.map((element) => (
                         <MenuItem>
-                          <LinkRouter to={`/gender/${element}`}>
-                            {element}
+                          <LinkRouter to={`/gender/${element}`} className="optionsDropdown">
+                            {element.toUpperCase()}
                           </LinkRouter>
                         </MenuItem>
                       ))}
@@ -550,8 +537,7 @@ const NavBar = (props) => {
 
               <MenuItem>
                 <Box sx={{ flexGrow: 0 }}>
-                  <Tooltip title="Select a Brand">
-                    <IconButton onClick={handleOpenBrandMenu} sx={{ p: 0 }}>
+                    <IconButton onClick={handleOpenBrandMenu} sx={{ p: 0 }} className="hoverButtonsNav">
                       <p className="pDropdown">
                         BRAND{" "}
                         <img
@@ -562,7 +548,6 @@ const NavBar = (props) => {
                         />
                       </p>
                     </IconButton>
-                  </Tooltip>
                   <Menu
                     sx={{ mt: "45px" }}
                     id="menu-appbar"
@@ -583,10 +568,10 @@ const NavBar = (props) => {
                       {uniqueBrandsArray?.map((element) => (
                         <MenuItem>
                           <LinkRouter
-                            className="menu-items-navbar"
+                            className="optionsDropdown"
                             to={`/brands/${element}`}
                           >
-                            {element}
+                            {element.toUpperCase()}
                           </LinkRouter>
                         </MenuItem>
                       ))}
@@ -598,16 +583,17 @@ const NavBar = (props) => {
 
             <Box>
               <Tooltip title="Open shopping cart">
-                <IconButton onClick={handleOpenCarritoMenu} sx={{ p: 0 }}>
+                <IconButton onClick={handleOpenCarritoMenu} sx={{ p: 0 }} className="hoverCart">
                   <img src={process.env.PUBLIC_URL + `/img/carrito.png`} />
                   {props.user ? (
                     <p
                       className="contPro"
                       style={{
                         backgroundColor: "rgba(255, 0, 0, 0.753)",
-                        fontSize: "20px",
-                        borderRadius: "30px",
-                        width: "30px",
+                        fontSize: "0.9rem",
+                        borderRadius: "50px",
+                        width: "1.3rem",
+                        color:"white"
                       }}
                     >
                       {cantProduct}
@@ -635,8 +621,8 @@ const NavBar = (props) => {
               >
                 {props.user ? (
                   <>
-                    <LinkRouter to="/checkout" className="normalLink">
-                      <MenuItem>Checkout</MenuItem>
+                    <LinkRouter to="/checkout" className="linkResponsive">
+                      <MenuItem className="cartButton">Checkout</MenuItem>
                     </LinkRouter>
                   </>
                 ) : (
@@ -704,12 +690,10 @@ const NavBar = (props) => {
                       </LinkRouter>
                     </MenuItem>
                     <MenuItem>
-                      {props.user.isAdmin === true ? (
+                      {props.user.isAdmin === true ?? (
                         <LinkRouter to="/adminView">
                           <span>Admin View</span>
                         </LinkRouter>
-                      ) : (
-                        <></>
                       )}
                     </MenuItem>
                   </>
