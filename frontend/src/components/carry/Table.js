@@ -1,4 +1,3 @@
-import { textAlign } from "@mui/system";
 import React from "react";
 import {useDispatch} from "react-redux";
 import { removeOneProduct } from "../../redux/carrito/carrito";
