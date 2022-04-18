@@ -63,10 +63,10 @@ function AdminView(props) {
   };
 
   return (
-    <>
+    <div className="containerAdminActions">
       <div className="adminContainer">
         <div>
-          <h1 className="titleAdmin animate__backInDown">Admin Section</h1>
+          <p className="titleAdmin">ADMINISTRATOR ACTIONS</p>
         </div>
         <div
           className="accordion accordion-flush accordionContainer"
@@ -529,7 +529,7 @@ function AdminView(props) {
         </div>
       </div>
       <div className="idBrand"></div>
-    </>
+    </div>
   );
 }
 

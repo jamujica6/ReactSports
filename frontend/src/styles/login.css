@@ -16,7 +16,7 @@
   background-color: white;
   border-radius: 5px;
   border-radius: 10px;
-  box-shadow: 0 25px 25px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 4px 5px rgba(0, 0, 0, 0.6);
 }
 
 .miniLogo {
@@ -57,15 +57,21 @@
   display: flex !important;
   justify-content: center !important;
   align-items: center !important;
-  background-color: #0d6efd;
+  background-color: #0a7bc1;
+  border: solid 1px #2b719d !important;
   border-radius: 4px;
   color: white;
   font-size: 1rem;
   text-align: center !important;
+  transition: 400ms;
+}
+
+.submitButton:hover {
+  background-color: #2b719d;
 }
 
 .singUpButton {
-  color: rgb(20, 42, 136);
+  color: white !important;
   text-decoration: underline;
 }
 
@@ -89,12 +95,12 @@
   background-color: white;
   border-radius: 5px;
   border-radius: 10px;
-  box-shadow: 0 15px 15px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 4px 5px rgba(0, 0, 0, 0.6);
 }
 
 .nombreLogin {
-  font-family: "Oooh Baby", cursive !important;
-  color: #03b5aa;
+  font-family: "Akshar", sans-serif !important;
+  color: #65656b;
   margin-bottom: 1rem;
   font-size: 3rem;
 }

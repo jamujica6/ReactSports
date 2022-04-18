@@ -1,3 +1,4 @@
+import { textAlign } from "@mui/system";
 import React from "react";
 import {useDispatch} from "react-redux";
 import { removeOneProduct } from "../../redux/carrito/carrito";
@@ -34,22 +35,25 @@ const Table = (props) => {
                   />
                 </div>
                 <div>
-                  <h6>{productos.productName}</h6>
+                  <h6 className="ProductNameTable">{productos.productName}</h6>
                 </div>
               </td>
 
-              <td>{productos.price}</td>
+              <td className="ProductPriceTable" style={{textAlign:"center"}}>USD ${productos.price}</td>
 
               <td className="botonera2">
                 <button onClick={removeItem} className="restaSuma">
-                  x
+                <img
+                      src={process.env.PUBLIC_URL + "/img/eliminarProductoCarrito.png"}
+                    />
                 </button>
               </td>
             </tr>
           );
         })
       ) : (
-        <p>Please Add an item to the cart</p>
+        <p  className="addItem">
+        PLEASE ADD AN ITEM TO THE CART</p>
       )}
     </tbody>
     

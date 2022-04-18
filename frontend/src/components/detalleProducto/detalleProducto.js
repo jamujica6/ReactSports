@@ -119,8 +119,20 @@ function DetalleProducto(props) {
           <div className="detalleProductoCarrito">
             {currentProduct.stock !== 0 && props.user ? (
               <>
-                <button id={productId} onClick={() => scremProduc(id)}>
-                  addWilson
+                <button
+                 className="botonAgregarAlCarrito"
+                 id={productId} 
+                 onClick={() => scremProduc(id)}
+                 >
+                   <img
+                      className="logoCarritoBoton"
+                      src={process.env.PUBLIC_URL + "/img/carritoBlanco.png"}
+                    />
+                     <p className="addToCart">ADD TO CART</p>
+                     <img
+                      className="logoCarritoBoton"
+                      src={process.env.PUBLIC_URL + "/img/siguiente.png"}
+                    />
                 </button>
               </>
             ) : (

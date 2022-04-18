@@ -68,7 +68,7 @@ function App(props) {
           <Route path="/brands/:brand" element={<ProductsView />} />
           <Route path="/gender/:gender" element={<ProductsView />} />
           <Route path="/type/:type" element={<ProductsView />} />
-          <Route path="/checkout" element={<CheckOut />} />
+          {props.user &&<Route path="/checkout" element={<CheckOut />} />}
           {!props.user && <Route path="/signUp" element={<SignUp />} />}
           {!props.user && <Route path="/signIn" element={<SignIn />} />}
         </Routes>

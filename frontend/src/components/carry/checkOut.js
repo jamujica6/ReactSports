@@ -45,17 +45,15 @@ function CheckOut(props) {
   return (
     <main id="main">
       <section id="general">
-        <div>
           <table id="tabla">
             <thead id="encabezado">
               <tr>
-                <th>Producto</th>
-                <th>Precio</th>
+                <th>PRODUCT</th>
+                <th  style={{textAlign:"center"}}>PRICE (USD$)</th>
               </tr>
             </thead>
             <Table productosAMostar={renderProd} reload={reload} setReload={setReload} />
           </table>
-        </div>
         <div id="botones">
           <button
             onClick={() => {
@@ -63,7 +61,7 @@ function CheckOut(props) {
             }}
             id="clear"
           >
-            Clear
+            DELETE ALL PRODUCTS
           </button>
         </div>
       </section>

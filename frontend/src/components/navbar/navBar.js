@@ -690,10 +690,12 @@ const NavBar = (props) => {
                       </LinkRouter>
                     </MenuItem>
                     <MenuItem>
-                      {props.user.isAdmin === true ?? (
-                        <LinkRouter to="/adminView">
+                      {props.user.isAdmin === true ? (
+                        <LinkRouter to="/adminView" className="linkResponsive">
                           <span>Admin View</span>
                         </LinkRouter>
+                      ):(
+                        <></>
                       )}
                     </MenuItem>
                   </>

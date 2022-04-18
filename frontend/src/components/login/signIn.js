@@ -46,7 +46,9 @@ const SignIn = (props) => {
           <Form.Check type="checkbox" label="Remember me" />
         </Form.Group>
         <div className="submitContainer">
-        <input type="submit" className="submitButton" placeholder="Log In"/>
+        <Button variant="primary" type="submit" className="submitButton">
+          Log In
+        </Button>
         </div>
       </Form>
       </div>

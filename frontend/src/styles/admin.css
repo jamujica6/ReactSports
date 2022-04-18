@@ -1,3 +1,11 @@
+.containerAdminActions{
+  width: 100%;
+  min-height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .adminContainer {
   display: flex;
   flex-direction: column;
@@ -13,9 +21,9 @@
   width: 80%;
   margin-left: auto;
   margin-right: auto;
-  box-shadow: 10px 10px 5px 3px rgba(0, 0, 0, 0.76);
-  -webkit-box-shadow: 10px 10px 5px 3px rgba(0, 0, 0, 0.76);
-  -moz-box-shadow: 10px 10px 5px 3px rgba(0, 0, 0, 0.76);
+  box-shadow: 5px 5px 5px 3px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 5px 5px 5px 3px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 5px 5px 5px 3px rgba(0, 0, 0, 0.5);
 }
 .titleAdmin {
   margin-top: 1rem;
@@ -30,4 +38,10 @@
 
 .idBrand {
   display: flex;
+}
+
+.titleAdmin{
+  font-family: "Akshar", sans-serif !important;
+  color: #262626;
+  font-size: 2.3rem;
 }

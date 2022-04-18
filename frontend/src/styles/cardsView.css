@@ -16,13 +16,14 @@ section {
 }
 
 .containerWhatsappButton {
-  width: 100%;
+  width: auto;
   padding-right: 1rem;
   height: 4rem;
   display: flex;
   justify-content: flex-end;
   position: fixed;
-  top: 53rem;
+  bottom: 2%;
+  right: 0.5%;
   z-index: 10;
 }
 

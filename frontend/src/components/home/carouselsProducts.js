@@ -43,11 +43,11 @@ function CarouselProducts(props) {
               slidesPerView: 2,
               spaceBetween: 20,
             },
-            800: {
+            1100: {
               slidesPerView: 3,
               spaceBetween: 40,
             },
-            1150: {
+            1500: {
               slidesPerView: 4,
               spaceBetween: 50,
             },
@@ -57,6 +57,14 @@ function CarouselProducts(props) {
         >
           {bestSeller.map((product, index) => (
             <SwiperSlide key="index" className="carouselProductsSlide">
+              <div className="imgBrandCarousel">
+              <img
+              className="logoBrands"
+                src={
+                  process.env.PUBLIC_URL + `/img/${product.brand.brand}.png`
+                }
+              />
+                </div>
               <img
                 className="imageProductsCarousel"
                 src={
@@ -71,14 +79,14 @@ function CarouselProducts(props) {
                 <h2 className="productNameCarousel">
                   {product.productName.toUpperCase()}
                 </h2>
-                <h3 className="productPriceCarousel">${product.price}</h3>
+                <h3 className="productPriceCarousel">USD ${product.price}</h3>
               </Link>
             </SwiperSlide>
           ))}
         </Swiper>
 
-        <p style={{ textAlign: "center" }} className="tittlesCarouselProducts">
-          FIFA WORLD CUP QATAR 2022
+        <p style={{ textAlign: "center" }} className="tittleCarouselMundial">
+          <span className="mundialFont">FIFA WORLD CUP</span> <span className="mundialFontQatar">QATAR </span><span className="color2022">2022</span>
         </p>
         <Swiper
           slidesPerView={1}
@@ -93,11 +101,11 @@ function CarouselProducts(props) {
               slidesPerView: 2,
               spaceBetween: 20,
             },
-            800: {
+            1100: {
               slidesPerView: 3,
               spaceBetween: 40,
             },
-            1150: {
+            1500: {
               slidesPerView: 4,
               spaceBetween: 50,
             },
@@ -107,6 +115,14 @@ function CarouselProducts(props) {
         >
           {Qatar.map((product, index) => (
             <SwiperSlide key="index" className="carouselProductsSlide">
+              <div className="imgBrandCarousel">
+              <img
+              className="logoBrand"
+                src={
+                  process.env.PUBLIC_URL + `/img/copaNegra.png`
+                }
+              />
+                </div>
               <img
                 className="imageProductsCarousel"
                 src={
@@ -119,7 +135,7 @@ function CarouselProducts(props) {
                 className="linksCarousel"
               >
                 <h2 className="productNameCarousel">{product.productName}</h2>
-                <h3 className="productPriceCarousel">${product.price}</h3>
+                <h3 className="productPriceCarousel">USD ${product.price}</h3>
               </Link>
             </SwiperSlide>
           ))}
